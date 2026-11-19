@@ -13,7 +13,7 @@ export function taskCard(task, project, member) {
     <div class="task-project">${escapeHtml(project ? project.nama : '')}</div>
     <div class="task-assignee">${avatar(member)}</div>
     <div class="task-meta">${task.deadline ? escapeHtml(task.deadline) : '—'} · ${task.estimasiJam} jam</div>
-    <div class="card-actions"><button class="btn-secondary" data-detail="${task.id}">Detail</button><button class="btn-primary" data-copy="${task.id}">Salin ringkasan</button></div>
+    <div class="card-actions"><button class="btn-secondary" data-detail="${task.id}">Detail</button><button class="btn-primary" data-copy="${task.id}">Salin ringkasan</button><button class="btn-secondary" data-wa="${task.id}">Bagikan via WhatsApp</button></div>
   </article>`;
 }
 

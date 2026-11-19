@@ -45,6 +45,9 @@ export function reset() {
 }
 
 let state = load();
+let filterState = { query: '', status: [], prioritas: [], assigneeId: 'all', sortBy: 'deadline' };
+export function getFilter() { return filterState; }
+export function setFilter(patch) { filterState = { ...filterState, ...patch }; return filterState; }
 
 export function getState() { return state; }
 export function setState(s) { state = s; save(state); }
